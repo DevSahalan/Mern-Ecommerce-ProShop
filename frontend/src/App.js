@@ -9,16 +9,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 const App = () => {
   return (
     <Router>
-      <switch>
-        <Header />
-        <main className='py-3'>
-          <Container>
-            <Route path='/' component={HomeScreen} exact />
-            <Route path='/product/:id' component={ProductScreen} exact />
-          </Container>
-        </main>
-        <Footer />
-      </switch>
+      <Header />
+      <main className='py-3'>
+        <Container>
+          <Route path='/' component={HomeScreen} exact />
+          <Route path='/product/:id' component={ProductScreen} exact />
+        </Container>
+      </main>
+      <Footer />
     </Router>
   )
 }
